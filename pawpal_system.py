@@ -1,29 +1,3 @@
-class Pet:
-    def __init__(self, name, species, breed, age, gender, medical_notes=""):
-        self.name = name
-        self.species = species
-        self.breed = breed
-        self.age = age
-        self.gender = gender
-        self.medical_notes = medical_notes
-        self.owner = None
-
-    def get_info(self):
-        pass
-
-
-class Owner:
-    def __init__(self, name):
-        self.name = name
-        self.pets = []
-        self.scheduler = Scheduler(self)
-
-    def add_pet(self, pet):
-        pass
-
-    def get_pets(self):
-        pass
-
 VALID_TASK_TYPES = {"feeding", "vet", "grooming"}
 
 
@@ -45,22 +19,52 @@ class Task:
         pass
 
 
+class Pet:
+    def __init__(self, name, species, breed, age, gender, medical_notes=""):
+        self.name = name
+        self.species = species
+        self.breed = breed
+        self.age = age
+        self.gender = gender
+        self.medical_notes = medical_notes
+        self.owner = None
+        self.tasks = []  # tasks belonging to this pet
+
+    def get_info(self):
+        pass
+
+
+class Owner:
+    def __init__(self, name):
+        self.name = name
+        self.pets = []
+        self.scheduler = Scheduler(self)
+
+    def add_pet(self, pet):
+        pass
+
+    def get_pets(self):
+        pass
+
+    def get_all_tasks(self):
+        pass  # aggregates tasks across all owned pets
+
+
 class Scheduler:
     def __init__(self, owner):
-        self.owner = owner
-        self.tasks = []  # flat list of Task objects; filter by task.task_type as needed
+        self.owner = owner  # queries tasks through owner -> pets -> tasks
 
     def get_tasks_by_type(self, task_type):
-        pass
+        pass  # searches across all owner's pets for matching task_type
 
     def schedule_feeding_time(self, pet, time, frequency):
-        pass
+        pass  # creates a Task and appends to pet.tasks
 
     def schedule_vet_appointment(self, pet, date, clinic):
-        pass
+        pass  # creates a Task and appends to pet.tasks
 
     def schedule_grooming_appointment(self, pet, date, groomer):
-        pass
+        pass  # creates a Task and appends to pet.tasks
 
     def _has_conflict(self, pet, date):
-        pass
+        pass  # checks pet.tasks for date conflicts

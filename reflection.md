@@ -17,7 +17,7 @@
     - Pet class should hold values like the name of the pet, species of pet, breed, age, etc
     - Scheduler class should have 3 methods for feeding schedule, vet appointment, and possibly grooming appointment 
 
-![Updated UML Diagram](image-2.png)
+![Updated UML Diagram](image-3.png)
 
 **b. Design changes**
 

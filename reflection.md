@@ -2,10 +2,22 @@
 
 ## 1. System Design
 
+# Three core requirements:
+1. add a pet
+2. create e feeding schedule
+3. schedule a veterinarian visit
+[4. grooming appointment]
+
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+    - The app should have classes such as Owner, Pet, and Scheduler. Owner owns the pet and uses the scheduler to schedule the tasks. 
 - What classes did you include, and what responsibilities did you assign to each?
+    - Owner should have the name of the person who the pet(s) belong to and it should have the name of the person and the name of the pets 
+    - Pet class should hold values like the name of the pet, species of pet, breed, age, etc
+    - Scheduler class should have 3 methods for feeding schedule, vet appointment, and possibly grooming appointment 
+
+![UML Diagram](image.png)
 
 **b. Design changes**
 

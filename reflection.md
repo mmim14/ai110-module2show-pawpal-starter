@@ -17,11 +17,14 @@
     - Pet class should hold values like the name of the pet, species of pet, breed, age, etc
     - Scheduler class should have 3 methods for feeding schedule, vet appointment, and possibly grooming appointment 
 
-![UML Diagram](image.png)
+![Updated UML Diagram](image-2.png)
 
 **b. Design changes**
 
 - Did your design change during implementation?
+    - These are the changes it suggested 
+    ![AI suggested changes](image-1.png)
+        - I implemented all the changes because it made sense, except remove_pet() and instead I deleted remove_pet() method for now. Removing a pet could be an option for the future because someone could give away their pet or it could pass away, but I won't be considering that for now. 
 - If yes, describe at least one change and why you made it.
 
 ---

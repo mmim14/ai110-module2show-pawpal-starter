@@ -18,6 +18,6 @@ def test_adding_task_increases_task_count():
     owner = Owner("Mimi")
     pichu = Pet("Pichu", "Cat", "American Shorthair", 1.5, "Male")
     owner.add_pet(pichu)
-    assert len(pichu.tasks) == 0
+    assert pichu.task_count == 0
     owner.scheduler.schedule_feeding_time(pichu, "2026-04-01", "every 4 hours")
-    assert len(pichu.tasks) == 1
+    assert pichu.task_count == 1
